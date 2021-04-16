@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "465790551722",
+    "firebase_url": "https://personify-c98fc.firebaseio.com",
+    "project_id": "personify-c98fc",
+    "storage_bucket": "personify-c98fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465790551722:android:1b5befcc0434d743e632d3",
+        "android_client_info": {
+          "package_name": "com.ceng319.n01231625.javapersonifyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465790551722-v40cfd033k1j6p2mdkjehelg6crujtfk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADVV2xodwL8_6ESyXiMR0giXKG_km2pVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465790551722-v40cfd033k1j6p2mdkjehelg6crujtfk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "465790551722-c0iftk7ok6dh3afb9s326k3pd8sodjkt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kabala.dominik.Personify-IOS"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

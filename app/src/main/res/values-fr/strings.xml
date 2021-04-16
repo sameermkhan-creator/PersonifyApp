@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">PERSONIFY</string>
+    <string name="personify">Personify</string>
+    <string name="login">S\'identifier</string>
+    <string name="email">Email:</string>
+    <string name="sign_up">S\'inscrire</string>
+    <string name="password">Mot de passe</string>
+    <string name="welcome">Bienvenu </string>
+
+    <string name="like">Je T\'aime</string>
+    <string name="dislike">Ne pas aimer</string>
+    <string name="upload_photo">Téléchargement photo </string>
+    <string name="log_out">Fermer la Session</string>
+    <string name="doesItWork">Fonctionne-t-elle ?</string>
+    <string name="title_activity_settings">Réglages</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Synchroniser</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Signature</string>
+    <string name="reply_title">Défaut Réponse</string>
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="french">French</string>
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sincronizar correos electrónicos periódicamente</string>
+    <string name="attachment_title">Télécharger les pièces jointes entrantes
+</string>
+    <string name="attachment_summary_on">Télécharger automatiquement les pièces jointes pour les emails entrants
+    </string>
+    <string name="attachment_summary_off">Télécharger uniquement les pièces jointes sur demande manuelle
+</string>
+    <string name="appearance">Apparence</string>
+    <string name="your_name">votre nom</string>
+    <string name="profile_pic">Image de profil</string>
+    <string name="Yes">Oui</string>
+    <string name="No">Non</string>
+    <string name="ok">D\'accord</string>
+    <string name="share">Partager</string>
+    <string name="cancel">Annuler</string>
+    <string name="language">Langue</string>
+    <string name="input">Contribution</string>
+    <string name="new_name">Entrez votre nouveau nom</string>
+    <string name="help">Aidez</string>
+    <string name="back">Retour</string>
+    <string name="rating">Évaluation</string>
+    <string name="select_photo">Sélectionnez photo</string>
+    <string name="current_photo">Photo actuelle</string>
+    <string name="forgot_password">Mot de passe oublié</string>
+    <string name="or_sign_up">s\'inscrire</string>
+    <string name="fetching_outfits">Aller chercher des tenues! S\'il vous plaît soyez patient.</string>
+    <string name="fetch_post">Chercher photo post</string>
+    <string name="no_photo_fetch">Aucune photo à récupérer.</string>
+    <string name="Rating_not">Note pas encore disponible.</string>
+    <string name="refresh">Rafraîchir</string>
+    <string name="error">Erreur</string>
+    <string name="current_vote">vote en cours</string>
+    <string name="required">Requis</string>
+    <string name="post">Poster</string>
+    <string name="number">nombre</string>
+    <string name="exception">Exception</string>
+    <string name="nothing_fetch">"Rien à Chercher "</string>
+    <string name="fetch_new_outfits">"Aller Chercher de Nouvelles Tenues "</string>
+    <string name="what_you_think">"Alors qu'est-ce que tu en penses "</string>
+    <string name="nothing_left">"Il ne restait rien! "</string>
+    <string name="password_format">Le mot de passe n\'est pas valide il doit contenir au moins 6 caractères</string>
+    <string name="email_in_use">L\'adresse e-mail est déjà utilisée par un autre compte.</string>
+    <string name="exit">Sortie</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">PERSONIFY</string>
+    <string name="personify">Personify</string>
+    <string name="login">Inciar</string>
+    <string name="email">Electronico:</string>
+    <string name="sign_up">Regístrate</string>
+    <string name="password">Contraseña</string>
+    <string name="welcome">Bienvenido </string>
+
+    <string name="like">Gustar</string>
+    <string name="dislike">Disgusto</string>
+    <string name="upload_photo">Subir Foto</string>
+    <string name="log_out">Cerrar Sesión</string>
+    <string name="doesItWork">¿Funciona el Atuendo?</string>
+    <string name="title_activity_settings">Configuraciones</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Mensajes</string>
+    <string name="sync_header">Sincronización</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Su Firma</string>
+    <string name="reply_title">Acción de respuesta predeterminada</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sincronizar correos electrónicos periódicamente</string>
+    <string name="attachment_title">Descargar archivos adjuntos entrantes</string>
+    <string name="attachment_summary_on">Descarga automáticamente archivos adjuntos para correos electrónicos entrantes
+    </string>
+    <string name="attachment_summary_off">Solo descargue archivos adjuntos cuando se solicite manualmente</string>
+    <string name="appearance">Apariencia</string>
+    <string name="your_name">Tu nombre</string>
+    <string name="profile_pic">Foto de perfil</string>
+    <string name="Yes">Sí</string>
+    <string name="No">No</string>
+    <string name="ok">Okay</string>
+    <string name="refresh">Refrescar</string>
+
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="french">French</string>
+    <string name="share">Compartir</string>
+    <string name="cancel">Cancelar</string>
+    <string name="language">Idioma</string>
+    <string name="input">Entrada</string>
+    <string name="new_name">Ingrese su nuevo nombre</string>
+    <string name="help">Ayuda</string>
+    <string name="back">Espalda</string>
+    <string name="rating">Clasificación</string>
+    <string name="select_photo">Seleccione Foto</string>
+    <string name="current_photo">Foto actual</string>
+    <string name="forgot_password">Olvidó tu contraseña?</string>
+    <string name="or_sign_up">O regístrate!</string>
+    <string name="fetching_outfits">Trayendo trajes! Por favor sea paciente.</string>
+    <string name="fetch_post">Obteniendo foto de la publicación</string>
+    <string name="no_photo_fetch">No hay foto para buscar.</string>
+    <string name="Rating_not">Calificación aún no disponible.</string>
+    <string name="error">ERROR</string>
+<string name="current_vote">voto actual</string>
+    <string name="required">Necesario</string>
+    <string name="post">Enviar</string>
+    <string name="number">Número</string>
+    <string name="exception">Excepción</string>
+    <string name="nothing_fetch">"Nada que Buscar "</string>
+    <string name="fetch_new_outfits">Buscar Nuevos Atuendos</string>
+    <string name="what_you_think">"Entonces, qué piensas "</string>
+    <string name="nothing_left">"¡No queda nada! "</string>
+    <string name="password_format">La contraseña no es válida, debe contener al menos 6 caracteres</string>
+    <string name="email_in_use">"La dirección de correo electrónico ya está en uso por otra cuenta. "</string>
+    <string name="exit">Salida</string>
+</resources>

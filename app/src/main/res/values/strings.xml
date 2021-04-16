@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name" translatable="false">Java Personify App</string>
+    <string name="personify">Personify</string>
+    <string name="login">Login</string>
+    <string name="email">Email:</string>
+    <string name="sign_up">Sign up</string>
+    <string name="password">Password</string>
+    <string name="welcome">Welcome </string>
+
+    <string name="like">Like</string>
+    <string name="dislike">Dislike</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="log_out">Log out!</string>
+    <string name="doesItWork">Does the outfit work?</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="french">French</string>
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="required">Required</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="appearance">Appearance</string>
+    <string name="your_name">Your name</string>
+    <string name="profile_pic">Profile Picture</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="ok">OK</string>
+    <string name="share">Share</string>
+    <string name="refresh">Refresh</string>
+    <string name="cancel">Cancel</string>
+    <string name="language">Language</string>
+    <string name="input">Input</string>
+    <string name="new_name">Enter Your New Name</string>
+    <string name="help">Help</string>
+    <string name="back">back</string>
+    <string name="rating">Rating</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="current_photo">Current Photo</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="or_sign_up">Or, sign up!</string>
+    <string name="fetching_outfits">Fetching outfits! Please be patient.</string>
+    <string name="fetch_post">Fetching post photo!</string>
+    <string name="no_photo_fetch">No photo to fetch.</string>
+    <string name="Rating_not">Rating not yet available.</string>
+    <string name="error">ERROR</string>
+    <string name="current_vote">Current votes</string>
+    <string name="post">Post</string>
+    <string name="number">Number</string>
+    <string name="exception">Exception</string>
+    <string name="nothing_fetch">Nothing to Fetch</string>
+    <string name="fetch_new_outfits">Fetching new Outfits</string>
+    <string name="what_you_think">So, what do you think?</string>
+    <string name="nothing_left">Nothing left!</string>
+    <string name="password_format">The password is invalid it must contain 6 characters at least</string>
+    <string name="email_in_use">The email address is already in use by another account.</string>
+    <string name="exit">Exit</string>
+    <string name="hardwareData" translatable="false">Hardware Data</string>
+</resources>
+

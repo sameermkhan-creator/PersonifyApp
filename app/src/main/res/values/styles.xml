@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Your AppTheme or other themes/styles here -->
+    <!-- The launcher theme. It sets the main window background to the launch_screen drawable -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/clothes</item>
+
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/clothes</item>
+        <!-- Optional, on Android 5+ you can modify the colorPrimaryDark color to match the windowBackground color for further branding-->
+        <!-- <item name="colorPrimaryDark">@android:color/white</item> -->
+    </style>
+
+
+    <!--
+          TODO 7.3 Define different color schemes here for APP so that the setting screen to change the theme used in the APP.
+      -->
+    <style name="AppThemePurple" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#9C27B0</item>
+        <item name="colorPrimaryDark">#7B1FA2</item>
+        <item name="colorAccent">#7C4DFF</item>
+        <item name="android:background">#7B1FA2</item>
+        <item name="colorButtonNormal">@color/button_purple</item>
+
+        <item name="windowActionBar">true</item>
+    </style>
+    <style name="AppThemeYellow" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#CDDC39</item>
+        <item name="colorPrimaryDark">#AFB42B</item>
+        <item name="colorAccent">#FFEB3B</item>
+        <item name="android:background">#AFB42B</item>
+        <item name="colorButtonNormal">@color/button_yellow</item>
+    </style>
+
+    <style name="AppThemeGreen" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryDark">#388E3C</item>
+        <item name="colorAccent">#009688</item>
+        <item name="android:background">#508A0E</item>
+        <item name="windowActionBar">true</item>
+        <item name="colorButtonNormal">@color/button_green</item>
+    </style>
+
+    <style name="Blue" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/primaryColor_blue</item>
+        <item name="colorPrimaryDark">@color/primaryColorDark_blue</item>
+        <item name="colorAccent">@color/primaryAccent_blue</item>
+        <item name="controlBackground">@color/primaryColorDark_blue</item>
+        <item name="android:background">@color/primaryColorDark_blue</item>
+        <item name="colorButtonNormal">@color/button_blue</item>
+
+    </style>
+    <style name="AppTheme.Red" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/primaryColor_red</item>
+        <item name="colorPrimaryDark">@color/primaryColorDark_red</item>
+        <item name="colorAccent">@color/primaryAccent_red</item>
+        <item name="android:background">#AC1346</item>
+        <item name="panelBackground">@color/primaryColorDark_red</item>
+        <item name="colorButtonNormal">@color/button_red</item>
+    </style>
+
+
+</resources>

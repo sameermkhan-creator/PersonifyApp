@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="primaryText">#000000</color>
+    <color name="buttonHighlight">#ff554f</color>
+
+
+
+    <color name="primaryColor_blue">#2196F3</color>
+    <color name="primaryColorDark_blue">#024992</color>
+    <color name="colorAccent_blue">#257BDB</color>
+    <color name="button_blue">#00294B</color>
+    <color name="button_green">#1D5321</color>
+    <color name="button_yellow">#778028</color>
+    <color name="button_purple">#442779</color>
+    <color name="button_red">#970707</color>
+    <color name="primaryAccent_blue">#E3F2FD</color>
+    <color name="primaryColor_red">#DA2121</color>
+    <color name="primaryColorDark_red">#FA080E</color>
+    <color name="primaryAccent_red">#FFEBEE</color>
+</resources>
