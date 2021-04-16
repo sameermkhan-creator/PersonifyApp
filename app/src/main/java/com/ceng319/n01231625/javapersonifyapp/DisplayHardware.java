@@ -51,35 +51,31 @@ import java.util.List;
 import java.util.Map;
 
 public class DisplayHardware extends AppCompatActivity {
-   private TextView lightSensorB;
+
     public RequestQueue queue;
     private FirebaseFunctions mFunctions;
     private ListView lv;
-    RecyclerView recyclerView;
-    Adapter adapter;
+    private RecyclerView recyclerView;
+    private Adapter Adapter;
     ArrayList<HashMap<String, String>>  dataList;
-
+    List<sensorData> Sensordata=new ArrayList<>();
+    private String value1,value2,value3,value4,value5,value6,value7,value8;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_display_hardware);
+        Log.e("test","Before fuction");
+      /*
         mFunctions = FirebaseFunctions.getInstance();
 
 
+        List<sensorData> Sensordata=new ArrayList<>();
+        recyclerView = (RecyclerView) findViewById(R.id.list);
+        Adapter = new Adapter(Sensordata);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setAdapter(Adapter);//add adapter to recyclerview */
         jsonParse();
-       recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        dataList = new ArrayList<>();
-
-     //   lv = findViewById(R.id.list);
-        ListAdapter adapter = new SimpleAdapter(
-                DisplayHardware.this, dataList,
-                R.layout.list_item, new String[]{"lightSensor", "coreVoltage",
-                "temperature","gesture"}, new int[]{R.id.coreVoltageB,
-                R.id.lightSensorB, R.id.TemperatureB,R.id.GESTURE});
-
-        lv.setAdapter(adapter);
-
+        Log.e("test","After fuction");
 
 
 
@@ -116,22 +112,44 @@ public class DisplayHardware extends AppCompatActivity {
                                 JSONObject jsonObj = new JSONObject(myResponse);
 
                                 // Getting JSON Array node
-                                JSONArray data = jsonObj.getJSONArray("data");
 
 
 
+                                    JSONArray data = jsonObj.getJSONArray("data");
+                                    JSONObject a = data.getJSONObject(0);
+                                    JSONObject lightSensor = a.getJSONObject("LIGHT_SENSOR");
+                                    value1 = lightSensor.getString("value");
+                                    JSONObject lightSensor2 = a.getJSONObject("LIGHT_SENSOR");
+                                    value2 = lightSensor2.getString("TIMESTAMP");
 
-                                for (int i = 0; i < data.length(); i++) {
-                                    JSONObject d = data.getJSONObject(i);
+                                    JSONArray data1 = jsonObj.getJSONArray("data");
+                                    JSONObject b = data1.getJSONObject(4);
+                                    JSONObject tempsensor = b.getJSONObject("TEMPERATURE");
+                                    value3 = tempsensor.getString("value");
+                                    JSONObject tempsensor2 = b.getJSONObject("TEMPERATURE");
+                                    value4 = tempsensor2.getString("TIMESTAMP");
+
+                                    JSONArray data2 = jsonObj.getJSONArray("data");
+                                    JSONObject c = data2.getJSONObject(5);
+                                    JSONObject core = c.getJSONObject("CORE_VOLTAGE");
+                                    value5 = core.getString("value");
+                                    JSONObject core2 = c.getJSONObject("CORE_VOLTAGE");
+                                    value6 = core2.getString("TIMESTAMP");
+
+                                    JSONArray data3 = jsonObj.getJSONArray("data");
+                                    JSONObject d = data3.getJSONObject(6);
+                                    JSONObject gesture = d.getJSONObject("GESTURE");
+                                    value7 = gesture.getString("value");
+                                    JSONObject gesture2 = d.getJSONObject("GESTURE");
+                                    value8 = gesture2.getString("TIMESTAMP");
+
+                                    //  tv1.setText(d.getString("value"));
+
+                                //    String lightSensorN = d.getString("TIMESTAMP");
+                                  //  Log.e("parsing light",""+lightSensorN);
 
 
-
-                                    String lightSensorN = d.getString("TIMESTAMP");
-                                    Log.e("parsing light",""+lightSensorN);
-
-
-
-                               lightSensorB.setText(lightSensorN);
+                               //lightSensorB.setText(lightSensorN);
                                //     String coreVoltageN = d.getString("CORE_VOLTAGE");
                                //     String temperatureN= d.getString("TEMPERATURE");
                                //     String gestureN = d.getString("GESTURE");
@@ -141,14 +159,31 @@ public class DisplayHardware extends AppCompatActivity {
                                     // tmp hash map for single contact
 
 
-                                  Log.e("Parsing node",""+lightSensorN);
+                                  //Log.e("Parsing node",""+lightSensorN);
 
-                                }
+
+                                // Setup and Handover data to recyclerview
+
 
                             } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
 
+                            }
+                    TextView tv1 = (TextView)findViewById(R.id.lsvalue);
+                    tv1.setText(value1);
+                    TextView tv2 = (TextView)findViewById(R.id.lstime);
+                    tv2.setText(value2);
+                    TextView tv3 = (TextView)findViewById(R.id.tempvalue);
+                    tv3.setText(value3);
+                    TextView tv4 = (TextView)findViewById(R.id.temptime);
+                    tv4.setText(value4);
+                    TextView tv5 = (TextView)findViewById(R.id.voltvalue);
+                    tv5.setText(value5);
+                    TextView tv6 = (TextView)findViewById(R.id.volttime);
+                    tv6.setText(value6);
+                    TextView tv7 = (TextView)findViewById(R.id.gesturevalue);
+                    tv7.setText(value7);
+                    TextView tv8 = (TextView)findViewById(R.id.gesturetime);
+                    tv8.setText(value8);
                 }
             }
         });
