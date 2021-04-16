@@ -51,6 +51,7 @@ import java.util.List;
 import java.util.Map;
 
 public class DisplayHardware extends AppCompatActivity {
+    private Button btnClick;
 
     public RequestQueue queue;
     private FirebaseFunctions mFunctions;
@@ -59,7 +60,9 @@ public class DisplayHardware extends AppCompatActivity {
     private Adapter Adapter;
     ArrayList<HashMap<String, String>>  dataList;
     List<sensorData> Sensordata=new ArrayList<>();
-    private String value1,value2,value3,value4,value5,value6,value7,value8;
+    private String value1,value2,value3,value4,value5,value6,value7,value8,value9,value10;
+    Button mButtonAdd;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_hardware);
@@ -74,10 +77,16 @@ public class DisplayHardware extends AppCompatActivity {
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setAdapter(Adapter);//add adapter to recyclerview */
-        jsonParse();
-        Log.e("test","After fuction");
+            jsonParse();
 
+        //Log.e("test","After fuction");
 
+        mButtonAdd = findViewById(R.id.refresh);
+        mButtonAdd.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                jsonParse();
+            }
+        });
 
     }
 
@@ -113,35 +122,40 @@ public class DisplayHardware extends AppCompatActivity {
 
                                 // Getting JSON Array node
 
+                                JSONArray data = jsonObj.getJSONArray("data");
+                                JSONObject a = data.getJSONObject(0);
+                                JSONObject lightSensor = a.getJSONObject("LIGHT_SENSOR");
+                                value1 = lightSensor.getString("value");
+                                JSONObject lightSensor2 = a.getJSONObject("LIGHT_SENSOR");
+                                value2 = lightSensor2.getString("TIMESTAMP");
 
+                                JSONArray data1 = jsonObj.getJSONArray("data");
+                                JSONObject b = data1.getJSONObject(4);
+                                JSONObject tempsensor = b.getJSONObject("TEMPERATURE");
+                                value3 = tempsensor.getString("value");
+                                JSONObject tempsensor2 = b.getJSONObject("TEMPERATURE");
+                                value4 = tempsensor2.getString("TIMESTAMP");
 
-                                    JSONArray data = jsonObj.getJSONArray("data");
-                                    JSONObject a = data.getJSONObject(0);
-                                    JSONObject lightSensor = a.getJSONObject("LIGHT_SENSOR");
-                                    value1 = lightSensor.getString("value");
-                                    JSONObject lightSensor2 = a.getJSONObject("LIGHT_SENSOR");
-                                    value2 = lightSensor2.getString("TIMESTAMP");
+                                JSONArray data2 = jsonObj.getJSONArray("data");
+                                JSONObject c = data2.getJSONObject(5);
+                                JSONObject core = c.getJSONObject("CORE_VOLTAGE");
+                                value5 = core.getString("value");
+                                JSONObject core2 = c.getJSONObject("CORE_VOLTAGE");
+                                value6 = core2.getString("TIMESTAMP");
 
-                                    JSONArray data1 = jsonObj.getJSONArray("data");
-                                    JSONObject b = data1.getJSONObject(4);
-                                    JSONObject tempsensor = b.getJSONObject("TEMPERATURE");
-                                    value3 = tempsensor.getString("value");
-                                    JSONObject tempsensor2 = b.getJSONObject("TEMPERATURE");
-                                    value4 = tempsensor2.getString("TIMESTAMP");
+                                JSONArray data3 = jsonObj.getJSONArray("data");
+                                JSONObject d = data3.getJSONObject(6);
+                                JSONObject gesture = d.getJSONObject("GESTURE");
+                                value7 = gesture.getString("value");
+                                JSONObject gesture2 = d.getJSONObject("GESTURE");
+                                value8 = gesture2.getString("TIMESTAMP");
 
-                                    JSONArray data2 = jsonObj.getJSONArray("data");
-                                    JSONObject c = data2.getJSONObject(5);
-                                    JSONObject core = c.getJSONObject("CORE_VOLTAGE");
-                                    value5 = core.getString("value");
-                                    JSONObject core2 = c.getJSONObject("CORE_VOLTAGE");
-                                    value6 = core2.getString("TIMESTAMP");
-
-                                    JSONArray data3 = jsonObj.getJSONArray("data");
-                                    JSONObject d = data3.getJSONObject(6);
-                                    JSONObject gesture = d.getJSONObject("GESTURE");
-                                    value7 = gesture.getString("value");
-                                    JSONObject gesture2 = d.getJSONObject("GESTURE");
-                                    value8 = gesture2.getString("TIMESTAMP");
+                              /*  JSONArray data4 = jsonObj.getJSONArray("data");
+                                JSONObject e = data4.getJSONObject(7);
+                                JSONObject ir = e.getJSONObject("IR");
+                                value7 = ir.getString("value");
+                                JSONObject ir2 = e.getJSONObject("IR");
+                                value8 = ir2.getString("TIMESTAMP"); */
 
                                     //  tv1.setText(d.getString("value"));
 
@@ -184,6 +198,10 @@ public class DisplayHardware extends AppCompatActivity {
                     tv7.setText(value7);
                     TextView tv8 = (TextView)findViewById(R.id.gesturetime);
                     tv8.setText(value8);
+                    /*TextView tv9 = (TextView)findViewById(R.id.irvalue);
+                    tv7.setText(value9);
+                    TextView tv10 = (TextView)findViewById(R.id.irvalue);
+                    tv8.setText(value10);*/
                 }
             }
         });
