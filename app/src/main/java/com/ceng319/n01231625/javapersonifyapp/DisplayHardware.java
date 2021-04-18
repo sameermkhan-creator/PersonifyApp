@@ -45,10 +45,17 @@ import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 import java.io.IOException;
+import java.security.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static java.lang.Integer.*;
 
 public class DisplayHardware extends AppCompatActivity {
     private Button btnClick;
@@ -90,6 +97,17 @@ public class DisplayHardware extends AppCompatActivity {
 
     }
 
+    public String newtime(String time){
+
+        long ntime = Long.parseLong(time);
+        Date date = new Date(ntime );
+        @SuppressLint("SimpleDateFormat") DateFormat formatter = new SimpleDateFormat("yyyy/MM/dd \nhh:mm aaa");
+        String dateFormatted = formatter.format(date);
+//        Log.d("TIMEVAL:", dateFormatted);
+
+        return dateFormatted;
+    }
+
     private void jsonParse() {
         //  final TextView mTextViewResult = findViewById(R.id.coreVoltageResult);
 
@@ -129,6 +147,7 @@ public class DisplayHardware extends AppCompatActivity {
                                 JSONObject lightSensor2 = a.getJSONObject("LIGHT_SENSOR");
                                 value2 = lightSensor2.getString("TIMESTAMP");
 
+              
                                 JSONArray data1 = jsonObj.getJSONArray("data");
                                 JSONObject b = data1.getJSONObject(4);
                                 JSONObject tempsensor = b.getJSONObject("TEMPERATURE");
@@ -185,19 +204,19 @@ public class DisplayHardware extends AppCompatActivity {
                     TextView tv1 = (TextView)findViewById(R.id.lsvalue);
                     tv1.setText(value1);
                     TextView tv2 = (TextView)findViewById(R.id.lstime);
-                    tv2.setText(value2);
+                    tv2.setText(    newtime(value2));
                     TextView tv3 = (TextView)findViewById(R.id.tempvalue);
                     tv3.setText(value3);
                     TextView tv4 = (TextView)findViewById(R.id.temptime);
-                    tv4.setText(value4);
+                    tv4.setText(    newtime(value4));
                     TextView tv5 = (TextView)findViewById(R.id.voltvalue);
                     tv5.setText(value5);
                     TextView tv6 = (TextView)findViewById(R.id.volttime);
-                    tv6.setText(value6);
+                    tv6.setText(    newtime(value6));
                     TextView tv7 = (TextView)findViewById(R.id.gesturevalue);
                     tv7.setText(value7);
                     TextView tv8 = (TextView)findViewById(R.id.gesturetime);
-                    tv8.setText(value8);
+                    tv8.setText(    newtime(value8));
                     /*TextView tv9 = (TextView)findViewById(R.id.irvalue);
                     tv7.setText(value9);
                     TextView tv10 = (TextView)findViewById(R.id.irvalue);
@@ -207,16 +226,4 @@ public class DisplayHardware extends AppCompatActivity {
         });
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
