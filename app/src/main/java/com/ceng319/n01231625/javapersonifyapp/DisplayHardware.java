@@ -169,12 +169,12 @@ public class DisplayHardware extends AppCompatActivity {
                                 JSONObject gesture2 = d.getJSONObject("GESTURE");
                                 value8 = gesture2.getString("TIMESTAMP");
 
-                              /*  JSONArray data4 = jsonObj.getJSONArray("data");
+                                JSONArray data4 = jsonObj.getJSONArray("data");
                                 JSONObject e = data4.getJSONObject(7);
                                 JSONObject ir = e.getJSONObject("IR");
-                                value7 = ir.getString("value");
+                                value9 = ir.getString("value");
                                 JSONObject ir2 = e.getJSONObject("IR");
-                                value8 = ir2.getString("TIMESTAMP"); */
+                                value10 = ir2.getString("TIMESTAMP");
 
                                     //  tv1.setText(d.getString("value"));
 
@@ -217,10 +217,10 @@ public class DisplayHardware extends AppCompatActivity {
                     tv7.setText(value7);
                     TextView tv8 = (TextView)findViewById(R.id.gesturetime);
                     tv8.setText(    newtime(value8));
-                    /*TextView tv9 = (TextView)findViewById(R.id.irvalue);
-                    tv7.setText(value9);
-                    TextView tv10 = (TextView)findViewById(R.id.irvalue);
-                    tv8.setText(value10);*/
+                    TextView tv9 = (TextView)findViewById(R.id.irvalue);
+                    tv9.setText(value9);
+                    TextView tv10 = (TextView)findViewById(R.id.irtime);
+                    tv10.setText(newtime(value10));
                 }
             }
         });
